@@ -1,0 +1,37 @@
+form,pre {
+  font-family: Lato;
+  font-size:12px;
+}
+
+.line{
+  margin-left:20px;
+  margin-top:10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.player{
+  margin-left:30px;
+  margin-top:10px;
+  margin-bottom: 10px;
+
+}
+
+.player-line{
+  padding-top:4px;
+}
+
+.player-line input {
+  margin-right:10px;
+  width:25%;
+}
+
+span{
+  color:blueviolet;
+  font-weight: bold;
+}
+
+pre{ 
+  font-size: 0.75em;
+  line-height: 0.95em;
+}

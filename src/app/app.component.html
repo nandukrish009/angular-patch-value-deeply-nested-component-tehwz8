@@ -1,0 +1,28 @@
+<form [formGroup]="cvForm">
+  <button (click)="saveForm()">save</button>
+  <button (click)="loadFormAction()">load</button>
+   <button (click)="seedForm()">seed</button>
+   <button (click)="changeValueInSaveData()">edit model</button>
+  <hr/>
+  <h1>{{dataModel.team_name}}</h1>
+  Team Name <input type="text" formControlName="team_name">
+  Id <input type="text" formControlName="id">
+  <div formArrayName="lines" >
+    <div *ngFor="let line of cvForm.get('lines').controls; let lineIndex = index" [formGroupName]="lineIndex" class="line">
+        <label> Line Name: <input formControlName="name" type="text"></label>
+        <div formArrayName="players" class="player">
+          <div *ngFor="let player of line.get('players').controls; let playerIndex = index" [formGroupName]="playerIndex" class="player-line">
+            <label> First: <input formControlName="first_name" type="text"></label>
+            <label> Last: <input formControlName="last_name" type="text"></label>
+          </div>
+        </div>
+    </div>
+  </div>
+</form>
+<hr />
+<span>SAVED FORM DATA</span>
+<pre>  {{showSavedValue() | json }}
+  </pre>
+<hr />
+<span>LIVE FORM DATA</span>
+<pre>{{showValue() | json}}</pre>
