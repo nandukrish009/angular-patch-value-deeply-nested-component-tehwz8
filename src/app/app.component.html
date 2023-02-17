@@ -1,4 +1,4 @@
-<form [formGroup]="cvForm">
+<form [formGroup]="cvForm" (ngSubmit)="onSubmit()">
   <button (click)="saveForm()">save</button>
   <button (click)="loadFormAction()">load</button>
    <button (click)="seedForm()">seed</button>
@@ -18,6 +18,7 @@
         </div>
     </div>
   </div>
+  <button type="submit">submit</button>
 </form>
 <hr />
 <span>SAVED FORM DATA</span>

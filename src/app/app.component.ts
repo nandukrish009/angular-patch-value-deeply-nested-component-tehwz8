@@ -82,7 +82,7 @@ export class AppComponent {
           players: this._fb.array([
             ]),
           })
-  }
+           }   
 
   ngOnInit() {
     this.dataModel = Object.create(null);
@@ -101,10 +101,13 @@ export class AppComponent {
       this.dataModel = data;
      });
   }
+  onSubmit(){
+    console.log(this.cvForm.value)
+  }
 }
 
 const seedData =  {
-  "team_name": "Team",
+  "team_name": "Team 1",
   "id":"this_is_id",
   "lines": [
     {
@@ -154,6 +157,23 @@ const seedData =  {
         },
         {
           "first_name": "3c",
+          "last_name": ""
+        }
+      ]
+    },
+    {
+      "name": "line a",
+      "players": [
+        {
+          "first_name": "nandu",
+          "last_name": "krishna"
+        },
+        {
+          "first_name": "2a",
+          "last_name": ""
+        },
+        {
+          "first_name": "3a",
           "last_name": ""
         }
       ]
